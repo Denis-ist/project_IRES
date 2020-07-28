@@ -1,0 +1,243 @@
+@font-face {
+    font-family: Helvetica_Neue; /* Гарнитура шрифта */
+    src: url('/static/fonts/Helvetica_Neue/HelveticaNeueCyr-Thin.ttf'); /* Путь к файлу со шрифтом */
+}
+body{
+    font-family: Helvetica_Neue;
+    background-color: whitesmoke;
+}
+.image_logo{
+position: absolute;
+left: 10%;
+width:6%;
+z-index:1;
+}
+.navbar, .collapse{
+    background-color: #4ab5b9 !important;
+}
+.navbar-toggler-icon{
+
+}
+.nav-link{
+    color: white !important;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    line-height: 2;
+    text-decoration:none;
+    cursor: pointer;
+}
+.nav-link:after {
+    background-color: #ffffff;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.nav-link:hover:after,
+.nav-link:focus:after {
+    width: 100%;
+}
+
+#telephone, #user{
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color:black;
+    color:black;
+}
+#back_top{
+    background-image: url('/static/банер.png');
+    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    height:100vh;
+    width:inherit;
+    color:white;
+    font-size:5vw;
+}
+
+#blablabla{
+top:25%;
+left:10%;
+}
+#fields{
+position:relative;
+top:20%;
+}
+#finder{
+position:relative;
+background-color: #f75854;
+color:white;
+left:75%;
+top:20px;
+}
+#card{
+    background-image: url('/static/images/График_картинка.png');
+    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
+    vertical-align: top;
+    height:inherit;
+    width:inherit;
+}
+#text{
+position:relative;
+color:black;
+}
+#carouselExampleControls{
+position:relative;
+top:20%;
+}
+.butt{
+background-color: #4ab5b9;
+color:white;
+}
+#up{
+position:fixed;
+text-decoration:none;
+bottom:0;
+right:1%;
+}
+.about{
+background-color:#4ab5b9;
+background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top;
+height:inherit;
+width:inherit;
+color:white;
+}
+.hr_white{
+background-color:white;
+height:0.2vh;
+}
+.hr_black{
+background-color:#4ab5b9;
+height:0.2vh;
+}
+.hr_grey{
+background-color:grey;
+height:0.1vh;
+width:100%;
+}
+.modal-body{
+background-color:#4ab5b9
+}
+.butt_orange{
+background-color: #f75854;
+color:white;
+}
+.butt_white{
+background-color: whitesmoke;
+color:#4ab5b9;
+}
+.butt_grey{
+background-color: grey;
+color:white;
+}
+.icons{
+width:15%;
+height:15%;
+}
+strong{
+color:#4ab5b9;
+}
+.text_height{
+font-size:3vh;
+}
+.text_height_footer{
+font-size:2vh;
+}
+.ancor_fix{
+border-top: 45px solid transparent;
+margin-top: -45px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+.news{
+background-image:url('/static/images/Очки_картинка.png');
+background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top;
+}
+.card_link{
+background-color: #4ab5b9;
+}
+#partners{
+background-color:#ebebea;
+background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top;
+height:inherit;
+width:inherit;
+}
+#subscribe{
+background-color:#ecf0f1;
+background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top;
+height:inherit;
+width:inherit;
+}
+#hands{
+height:20vh;
+width:20vh;
+}
+.news_subscribe{
+background-color:#4ab5b9;
+background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top;
+height:inherit;
+width:inherit;
+color:white;
+}
+.bg_custom{
+color: #4ab5b9;
+}
+.bg_footer{
+background-color:black;
+color:white;
+}
+.fa{
+color:whitesmoke;
+}
+.hyper{
+text-decoration:none;
+color:white;
+}
+.hyper:hover{
+text-decoration:none;
+color:grey;
+}
+li{
+list-style-type: none;
+}
+.review{
+background-color:whitesmoke;
+height:30vh;
+width:60vh;
+}
+.review_logo{
+border-radius: 100%; /* Радиус скругления */
+width:10%;
+
+box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+.blank_row{
+height:10vh;
+}

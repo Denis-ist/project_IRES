@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#4ab5b9">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href={{url_for('static', filename='style.css' )}}>
+    <link rel="stylesheet" href="/static/fontawesome/css/font-awesome.min.css">
+    <title>IRES-consulting</title>
+</head>
+
+<body>
+<div class="container-fluid p-0">
+    <!--    Навигация-->
+    <nav class="navbar navbar-expand-xl sticky-top navbar-dark bg-light">
+        <span class="navbar-brand mb-0 h1">IRES-Consulting</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+                <a class="nav-item nav-link mr-5" href="#back_top">Главная</a>
+                <a class="nav-item nav-link mr-5" href="#card">Карточки</a>
+                <a class="nav-item nav-link mr-5" href="#about">О проекте</a>
+                <a class="nav-item nav-link mr-5" href="#subscribe">Подписка</a>
+                <a class="nav-item nav-link mr-5" href="#news">Новости</a>
+                <a class="nav-item nav-link mr-5" href="#partners">Парнерам</a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 butt_orange" type="submit">Найти</button>
+                </form>
+            </div>
+
+            <a href="tel:+74951234567" id="telephone" class="ml-2"><i class="fa fa-phone" aria-hidden="true"></i>
+                +7(495)123-45-67</a>
+            <a href="" data-toggle="modal" data-target="#exampleModal">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle ml-5 text-white"
+                     fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <!--    Главная-->
+    <div id="back_top" class="ancor_fix">
+        <div class="row m-0 d-block w-75 position-relative" id="blablabla">
+            <div class="col" data-aos="fade-down">
+                <p>Мы собрали для Вас все исследовательские компании России, Казахстана
+                    и Европы</p>
+            </div>
+            <div class="row h-25">
+                <div class="col-sm-3 col-md-6 col-lg-6 col-xl-3 my-auto">
+                    <input class="form-control mr-sm-2 " type="search"
+                           placeholder="Название компании"
+                           aria-label="Search">
+                </div>
+                <div class="col-sm-3 col-md-6 col-lg-6 col-xl-3 mb-2 my-auto">
+                    <select class="custom-select form-control">
+                        <option selected>Отрасль</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 col-md-6 col-lg-6 col-xl-3 mb-2 my-auto" >
+                    <select class="custom-select form-control">
+                        <option selected>Тип материала</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 col-md-6 col-lg-6 col-xl-3 my-auto" >
+                    <select class="custom-select form-control">
+                        <option selected>Метод исследования</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row h-25">
+                <div class="col-xl-3 offset-xl-9 my-auto">
+                    <a href="#" class="btn butt_orange w-100">Найти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Карточки-->
+    <div class="ancor_fix" id="card">
+        <div class="row mt-3 m-0 d-block w-100">
+            <div class="col-3">
+                <p class="mt-2 text_height" id="text"><b>Карточки</b></p>
+                <hr class="hr_black">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row m-0">
+                <div class="col">
+                    <div class="card-group justify-content-center " id="cards">
+                        <div class="owl-carousel">
+                            <div class="col-sm-3 col-md-4 col-lg-3 col-xl-6 m-0">
+                                <div class="card m-1 shadow p-3 mb-3 bg-white rounded">
+                                    <img src="/static/images/logo_consult_json.gif" class="" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">J'son & Partners Consulting</h5>
+                                        <p class="card-text">Ведущее консалтинговое агентство на рынках
+                                            телекоммуникаций,
+                                            ИТ,
+                                            медиа и инновационных технологий.</p>
+                                        <a href="#" class="btn butt w-100">Подробнее</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="badge badge-pill badge-secondary">телекоммуникации</span>
+                                        <span class="badge badge-pill badge-secondary">медиа</span>
+                                        <span class="badge badge-pill badge-secondary">ИТ</span>
+                                        <span class="badge badge-pill badge-secondary">отчет</span>
+                                        <span class="badge badge-pill badge-secondary">подписка</span>
+                                        <span class="badge badge-pill badge-secondary">качественное</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-4 col-lg-3 col-xl-6 m-0">
+                                <div class="card m-1 shadow p-3 mb-3 bg-white rounded">
+                                    <img src="/static/images/GfK-logo.jpg" class="" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">GfK Group</h5>
+                                        <p class="card-text">Немецкая компания, одна из крупнейших в мире. Реализует
+                                            все виды социологических и маркетинговых исследований, а также собственные
+                                            исследовательские проекты. </p>
+                                        <a href="#" class="btn butt w-100">Подробнее</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="badge badge-pill badge-secondary">маркетинг</span>
+                                        <span class="badge badge-pill badge-secondary">исследования</span>
+                                        <span class="badge badge-pill badge-secondary">подписка</span>
+                                        <span class="badge badge-pill badge-secondary">качественное</span>
+                                        <span class="badge badge-pill badge-secondary">количественное</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-4 col-lg-3 col-xl-6 m-0">
+                                <div class="card m-1 shadow p-3 mb-3 bg-white rounded">
+                                    <img src="/static/images/Unknown.png" class="" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">COMCON Research</h5>
+                                        <p class="card-text">Является одним
+                                            из лидеров на рынке маркетинговых исследований Санкт-Петербурга и
+                                            Северо-западного
+                                            региона России.</p>
+                                        <a href="#" class="btn butt w-100">Подробнее</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="badge badge-pill badge-secondary">телекоммуникации</span>
+                                        <span class="badge badge-pill badge-secondary">маркетинг</span>
+                                        <span class="badge badge-pill badge-secondary">отчет</span>
+                                        <span class="badge badge-pill badge-secondary">подписка</span>
+                                        <span class="badge badge-pill badge-secondary">качественное</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    О проекте-->
+    <div class="about ancor_fix text_height" id="about">
+        <div class="row mt-3 m-0">
+            <div class="col-3">
+                <p class="mt-2"><b>О проекте</b></p>
+                <hr class="hr_white">
+            </div>
+        </div>
+        <div class="container-fluid justify-content-center align-middle">
+            <div class="row m-0 ">
+                <div class="col-md-6 col-xl-8 my-auto text-justify">
+                    <p class="">Что такое IRES? - платформа исследовательских компаний в России, Казахстане, Европе. Мы
+                        помогаем
+                        бизнесу реализовывать возможности и находить новых партнеров.</p>
+                </div>
+                <div class="col-md-6 col-xl-4 my-auto">
+                    <p class="text-justify"><b>10000 +</b></p>
+                    <p class="text-justify">исследовательских компаний</p>
+                    <p class="text-justify"><b>1500 +</b></p>
+                    <p class="text-justify">исследований приобретено через нашу платформу</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Подписка-->
+    <div class="subscribe ancor_fix" id="subscribe">
+        <div class="row mt-3 m-0 d-block w-100">
+            <div class="col-3">
+                <p class="mt-2 text_height"><b>Подписка</b></p>
+                <hr class="hr_black">
+            </div>
+        </div>
+        <div class="row m-0 ">
+            <div class="col-md-12 col-xl-8 my-auto">
+                <p class="text_height text-justify">Мы знаем, что для каждой компании важно получить качественный
+                    продукт на выгодных
+                    условиях. Поэтому мы предлагаем наше решение для Вашего бизнеса.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="card-group justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <img src="/static/icons/favorite.svg" alt="" class="icons mx-auto d-block mb-2">
+                                <h5 class="card-title text-center"><strong>Silver</strong></h5>
+                                <p class="card-text text-center">10000 руб./мес</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к базе исследовательских компаний
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к покупке отчетов
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn butt_orange w-100 mt-3">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <img src="/static/icons/quality.svg" alt="" class="icons mx-auto d-block mb-2">
+                                <h5 class="card-title text-center"><strong>Gold</strong></h5>
+                                <p class="card-text text-center">20000 руб./мес</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к базе исследовательских компаний
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к покупке отчетов
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Связь с партнерами
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к готовым отчетам
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn butt_orange w-100 mt-3">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <img src="/static/icons/crown.svg" alt="" class="icons mx-auto d-block mb-2">
+                                <h5 class="card-title text-center"><strong>Platinum</strong></h5>
+                                <p class="card-text text-center">30000 руб./мес</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к базе исследовательских компаний
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к покупке отчетов
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Связь с партнерами
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Доступ к готовым отчетам
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        Сопровождение в проектах: помощь в написании ТЗ, общение
+                                        с
+                                        агенствами
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn butt_orange w-100 mt-3">Купить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Новости-->
+    <div class="news ancor_fix" id="news">
+        <div class="row mt-3 m-0 d-block w-100">
+            <div class="col-3">
+                <p class="mt-2 text_height"><b>Новости</b></p>
+                <hr class="hr_black">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row m-0 d-block w-100 justify-content-center">
+                <div class="card-group">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">23.06.2020</h6>
+                                <h5 class="card-title font-weight-bold">Влияние COVID-19 на бизнес ИТ и бизнес
+                                    услуги</h5>
+                                <p class="">Оценка воздействия пандемии коронавируса на сферу ИТ и бизнес-услуг</p>
+                                <a href="#" class="card-link align-right">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">22.06.2020</h6>
+                                <h5 class="card-title font-weight-bold">Исследование утечек информации через некорректно
+                                    настроенные облачные
+                                    сервисы</h5>
+                                <p class="">Число утечек из облачных сервисов в мире выросло в 3,5 раза, а в России - в
+                                    22 раза по сравнению с 2018 г.</p>
+                                <a href="#" class="card-link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">21.06.2020</h6>
+                                <h5 class="card-title font-weight-bold">Big-Data в промышленности и ИТ-отрасли </h5>
+                                <p class="">28,5% организаций промышленности используют большие данные</p>
+                                <a href="#" class="card-link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">20.06.2020</h6>
+                                <h5 class="card-title font-weight-bold">Перспективы рынка мобильного ритейла РФ после
+                                    снятия карантинных мер </h5>
+                                <p class="">85% респондентов считают, что могут закрыться до 30% салонов.</p>
+                                <a href="#" class="card-link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-sm-4 col-md-6 col-lg-3 offset-sm-8 offset-md-6 offset-lg-9 w-100">
+                    <a href="#" class="btn butt w-100 mb-3">Смотреть все</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Партнеры-->
+    <div class="partners ancor_fix text_height" id="partners">
+        <div class="row mt-3 m-0 d-block w-100">
+            <div class="col-3">
+                <p class="mt-2 text_height"><b>Партнерам</b></p>
+                <hr class="hr_black">
+            </div>
+        </div>
+        <div class="row m-0 ">
+            <div class="col-md-12 col-xl-8 my-auto">
+                <p class="text-justify">Мы помогаем выйти на новые перспективные рынки и расширить возможности
+                    собственного бизнеса. Наша цель в работе с партнерами - надежные долгосрочные взаимоотношения</p>
+            </div>
+            <div class="col text-center">
+                <img src="/static/icons/рукопожатие.png" id="hands" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row m-0 text-justify">
+                <div class="col-md-8 my-auto">
+                    <p class=""><b>Что мы предлагаем:</b></p>
+                </div>
+            </div>
+            <div class="row m-0 ">
+                <div class="col-md-6 col-lg-6">
+                    <p class="">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2 bg_custom"
+                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Полная база исследовательских компаний
+                    </p>
+                    <p>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2 bg_custom"
+                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Новая ниша и востребованный продукт
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <p>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2 bg_custom"
+                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Выгодные условия сотрудничества
+                    </p>
+                    <p>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2 bg_custom"
+                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        Гарантированная защита сделки
+                    </p>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-sm-4 col-md-6 col-lg-3 offset-sm-8 offset-md-6 offset-lg-9 w-100">
+                    <a href="#" class="btn butt_orange w-100">Стать партнером</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-0 d-block w-100">
+            <div class="col">
+                <p class="mt-2 text_height"><b>Отзывы о нас:</b></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row blank_row">
+            </div>
+            <div class="row m-0">
+                <div class="owl-carousel justify-content-center">
+                    <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+                        <div class="card m-0 p-0 mx-auto d-block text-center ">
+                            <img src="static/images/review-1.png" class="card-img-bottom review_logo" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><b>Александра Т.</b></h5>
+                                <h5 class="card-title text-center">Специалист по развитию бизнеса</h5>
+                                <p class="card-text"><i>"Наша компания благодарит Вас за проделанную работу.
+                                    Сотрудничество
+                                    с
+                                    вами принесло нам новых клиентов и вдохновило на новые идеи для дальнейшего
+                                    развития,
+                                    наш бизнес вышел на новый уровень."</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+                        <div class="card m-0 p-0 mx-auto d-block text-center">
+                            <img src="static/images/review-2.png" class="card-img-top review_logo" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><b>Андрей Д.</b></h5>
+                                <h5 class="card-title text-center">Вице-президент по работе с партнерами</h5>
+                                <p class="card-text"><i>"Мы довольны таким плодотворным сотрудничеством с IRES. Это
+                                    команда
+                                    специалистов высокого уровня, которые знают как вести переговоры и координировать
+                                    работу. Компания продемонстрировала профессиональный подход и оперативное
+                                    реагирование
+                                    на все наши запросы."</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0 d-block w-100 text-justify">
+                <div class="col">
+                    <p class="mt-2 text_height"><b>Наши партнеры на карте:</b></p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="" id="mymap">
+                </div>
+            </div>
+        </div>
+
+        <div class="news_subscribe ancor_fix text_height" id="news_subscribe">
+            <div class="container">
+                <div class="row m-0  mt-3">
+                    <div class="col-md-7 col-xl-8 my-auto">
+                        <p class="text-justify">Подпишитесь на наши еженедельные новости</p>
+                    </div>
+                    <div class="col-md-5 col-xl-4 my-auto ">
+                        <form class="form-inline">
+                            <input class="form-control w-100 " type="search" placeholder="email" aria-label="Search">
+                            <button class="btn butt_white w-100 mb-3" type="submit">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg_footer text_height_footer">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4 my-auto">
+                        <p>Меню:</p>
+                        <ul class="p-0">
+                            <li><a href="#back_top" class="hyper">Главная</a></li>
+                            <li><a href="#card" class="hyper">Карточки</a></li>
+                            <li><a href="#about" class="hyper">О проекте</a></li>
+                            <li><a href="#subscribe" class="hyper">Подписка</a></li>
+                            <li><a href="#news" class="hyper">Новости</a></li>
+                            <li><a href="#partners" class="hyper">Партнерам</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4">
+                        <p>Контакты:</p>
+                        <ul class="p-0">
+                            <li><p>Адрес...</p></li>
+                            <li><p>Почта...</p></li>
+                            <li><p>Телефон...</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-0 col-xl-4 offset-xl-0">
+                        <input class="form-control w-100 mt-3" type="text" placeholder="Поиск по сайту"
+                               aria-label="Search">
+                        <button class="btn w-100 butt_grey mb-2" type="button">Найти</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr_grey">
+            <div class="container">
+                <div class="row m-0 ">
+                    <div class="col-sm-6 col-lg-6 col-xl-6 text-center">
+                        <p>
+                            &copy IRES, Все права защищены, 2020
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 text-center mb-3">
+                        <a href="#">
+                            <i class="fa fa-2x fa-facebook mr-3" aria-hidden="true"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-2x fa-instagram mr-3" aria-hidden="true"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-2x fa-vk" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Окно авторизации -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body justify-content-center rounded shadow text-white">
+                        <form>
+                            <div>
+                                <div class="auth d-none">
+                                    <div class="form-group">
+                                        <p class="text-center">Авторизация</p>
+                                        <label for="auth_email">Адрес email</label>
+                                        <input type="email" class="form-control" id="auth_email"
+                                               aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="auth_pass">Пароль</label>
+                                        <input type="password" class="form-control" id="auth_pass">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                                    </div>
+                                    <button type="submit" class="btn butt_orange w-100">Войти</button>
+                                </div>
+                                <div class="register">
+                                    <div class="form-group">
+                                        <p class="text-center">Регистрация</p>
+                                        <label for="register_name">Название</label>
+                                        <input type="text" class="form-control" id="register_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="register_email">Адрес email</label>
+                                        <input type="email" class="form-control" id="register_email"
+                                               aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="register_pass">Пароль</label>
+                                        <input type="password" class="form-control" id="register_pass">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="register_pass1">Пароль еще раз</label>
+                                        <input type="password" class="form-control" id="register_pass1">
+                                    </div>
+                                    <button type="submit" class="btn butt_orange w-100">Зарегистрироваться</button>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn butt_orange mt-2 w-100" onclick="change()" id="button_account">Есть
+                            аккаунт?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:scroll(0,0)" id="up" class="btn butt_orange"> НАВЕРХ </a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/static/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="/static/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+  AOS.init();
+
+
+
+
+
+
+    </script>
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aca882bc5066cd7924cc690aa6d92f5f618b7060db93684e77f6ec2d82646ff82&amp;width=100%25&amp;height=358&amp;lang=ru_RU&amp;scroll=false&amp;id=mymap"></script>
+    <script src="/static/js/scripts.js"></script>
+    <!--;apikey=<84e6824b-4f9d-4069-932d-1a8f66cd834b>-->
+</body>
+
+</html>
